@@ -2,9 +2,11 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaBarsStaggered } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
+import { useRouter } from 'next/router';
 
 function Footer() {
   const [menu, setMenu] = useState(false)
+  const router = useRouter()
   return (
     <footer>
       <div className='py-16'>
@@ -12,7 +14,7 @@ function Footer() {
           ©Digital Existence 2022
         </p>
       </div>
-      <div className='py-7'>
+      <div className={`py-7 ${router.pathname === '/' ? "block" : "hidden"}`}>
         <div className='container mx-auto px-4 flex flex-row'>
           <div className='w-[45%]'>
             <Link href="/" className='text-[32px] leading-7 font-normal text-black/30 hover:text-black'>
