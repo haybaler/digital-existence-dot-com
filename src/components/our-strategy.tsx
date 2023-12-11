@@ -1,19 +1,47 @@
+import { Variants, motion } from 'framer-motion';
 import React from 'react'
 
 function Our_Strategy() {
+    const fadeInUp: Variants = {
+        offscreen: {
+            transform: "translateY(15%)",
+            opacity: 0,
+        },
+        onscreen: {
+            transform: "translateY(0)",
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.5
+            }
+        }
+    };
     return (
         <section>
-            <div className='container mx-auto px-4 py-16'>
-                <h3 className='text-sm leading-5 font-medium uppercase text-black/50 text-center mb-3'>
+            <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                className='container mx-auto px-4 py-16'>
+                <motion.h3
+                variants={fadeInUp}
+                 className='text-sm leading-5 font-medium uppercase text-black/50 text-center mb-3'>
                     WHAT WE BELIEVE IN
-                </h3>
-                <h2 className='sm:text-[36px] text-3xl leading-[50px] font-normal text-center text-black bg-white border border-black max-w-[910px] mx-auto py-2'>
+                </motion.h3>
+                <motion.h2 
+                variants={fadeInUp}
+                className='sm:text-[36px] text-3xl leading-[50px] font-normal text-center text-black bg-white border border-black max-w-[910px] mx-auto py-2'>
                     Blending digital and analog marketing activities <br /> to create holistic go-to-market activities.
-                </h2>
+                </motion.h2>
 
-            </div>
+            </motion.div>
             <div className='container mx-auto border-t'></div>
-            <div className='container mx-auto px-4 py-16'>
+            <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            className='container mx-auto px-4 py-16'>
                 <div className='max-w-[912px] mx-auto'>
                     <p className='text-xl font-normal text-black/50 text-center mb-7'>
                         One of our first marketing campaigns was a sign-up list near a cash register. Daily we would input the names and addresses into Excel, export the Excel in to Microsoft Word, and print the addresses on Avery postcards. On the other side we would print a latest design from Microsoft Publisher.
@@ -112,7 +140,7 @@ function Our_Strategy() {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

@@ -1,3 +1,4 @@
+"use client"
 import Banner from '@/components/banner'
 import ContactForm from '@/components/contact-form'
 import React from 'react'
