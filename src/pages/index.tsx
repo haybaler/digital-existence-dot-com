@@ -1,3 +1,4 @@
+"use client"
 import Banner from "@/components/banner";
 import Grow_Business from "@/components/grow-business";
 import SeoMeta from "@/components/seo";

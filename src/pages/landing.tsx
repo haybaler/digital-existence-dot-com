@@ -1,21 +1,43 @@
+"use client"
 import Grow_Business from '@/components/grow-business'
 import SeoMeta from '@/components/seo'
+import { Variants, motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
 export default function Landing() {
+    const fadeInUp: Variants = {
+        offscreen: {
+            transform: "translateY(15%)",
+            opacity: 0,
+        },
+        onscreen: {
+            transform: "translateY(0)",
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.5
+            }
+        }
+    };
     return (
         <main>
-            <SeoMeta title="  Karius Test Landing Page" description=" Far far away, behind the word mountains, far from the countries Vokalia and Consonantia" url="https://digital-existen.vercel.app/landing" />    
-            <section>
+            <SeoMeta title="  Karius Test Landing Page" description=" Far far away, behind the word mountains, far from the countries Vokalia and Consonantia" url="https://digital-existen.vercel.app/landing" />
+            <motion.section
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}>
                 <div className='container mx-auto px-4'>
                     <div className='bg-[url("/images/about.png")] bg-center bg-cover bg-no-repeat py-[7.5rem] md:px-0 px-10 h-[620px] grid items-center justify-center'>
-                        <h1 className='sm:text-[64px] sm:leading-[80px] text-4xl font-normal text-center text-black bg-white border-[3px] border-black max-w-[900px] mx-auto py-2 px-5'>
+                        <motion.h1
+                            variants={fadeInUp}
+                            className='sm:text-[64px] sm:leading-[80px] text-4xl font-normal text-center text-black bg-white border-[3px] border-black max-w-[900px] mx-auto py-2 px-5'>
                             Karius Test Landing Page
-                        </h1>
+                        </motion.h1>
                     </div>
                 </div>
-            </section>
+            </motion.section>
             <section>
                 <div className='container mx-auto px-4 py-16 flex md:flex-row flex-col gap-7 p-3 justify-between'>
                     <div className='md:w-1/4 w-full grid gap-5'>

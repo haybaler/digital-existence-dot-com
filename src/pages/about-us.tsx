@@ -1,3 +1,4 @@
+"use client"
 import Banner from '@/components/banner'
 import Grow_Business from '@/components/grow-business'
 import Our_Strategy from '@/components/our-strategy'

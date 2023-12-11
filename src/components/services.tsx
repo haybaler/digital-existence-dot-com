@@ -1,12 +1,30 @@
+import { Variants, motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
 function Services() {
+    const fadeInUp: Variants = {
+        offscreen: {
+            transform: "translateY(15%)",
+            opacity: 0,
+        },
+        onscreen: {
+            transform: "translateY(0)",
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.5
+            }
+        }
+    };
     return (
-        <section className='py-16'>
+        <motion.section className='py-16'>
             <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-7'>
                 {Service_Date.map((item: any, idx: number) => {
-                    return <div key={idx}>
+                    return <motion.div
+                        variants={fadeInUp}
+                        key={idx}>
                         <Image src={item.img} alt='service/1' width={50} height={50} />
                         <h3 className='text-xl font-normal text-black my-5'>
                             {item.title}
@@ -14,11 +32,11 @@ function Services() {
                         <p className='text-xl font-normal text-black/60'>
                             {item.content}
                         </p>
-                    </div>
+                    </motion.div>
                 })}
 
             </div>
-        </section>
+        </motion.section>
     )
 }
 
