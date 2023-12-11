@@ -11,7 +11,7 @@ function Grow_Business() {
                 <p className='text-xl leading-7 font-normal text-black/50 text-center max-w-[788px] mx-auto mt-5'>
                     Today is the day to build the business of your dreams. Share your mission with the world — and blow your customers away.
                 </p>
-                <Link href="#" className='text-sm font-medium uppercase text-white bg-black py-4 px-10 hover:opacity-80 flex w-fit mx-auto mt-10'>
+                <Link href="/contact-us" className='text-sm font-medium uppercase text-white bg-black py-4 px-10 hover:opacity-80 flex w-fit mx-auto mt-10'>
                     CONTACT US
                 </Link>
             </div>
