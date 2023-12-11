@@ -1,10 +1,12 @@
 import Grow_Business from '@/components/grow-business'
+import SeoMeta from '@/components/seo'
 import Image from 'next/image'
 import React from 'react'
 
 export default function Landing() {
     return (
         <main>
+            <SeoMeta title="  Karius Test Landing Page" description=" Far far away, behind the word mountains, far from the countries Vokalia and Consonantia" url="https://digital-existen.vercel.app/landing" />    
             <section>
                 <div className='container mx-auto px-4'>
                     <div className='bg-[url("/images/about.png")] bg-center bg-cover bg-no-repeat py-[7.5rem] md:px-0 px-10 h-[620px] grid items-center justify-center'>
