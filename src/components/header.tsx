@@ -24,8 +24,8 @@ function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/contact-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
-                                Contact
+                            <Link href="/landing" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                            Karius
                             </Link>
                         </li>
                     </ul>

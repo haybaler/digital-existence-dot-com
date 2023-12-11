@@ -32,12 +32,12 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
-                  Contact
+                <Link href="/landing" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                  Karius
                 </Link>
               </li>
             </ul>
-            <Link href="#" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 md:block hidden'>
+            <Link href="/contact-us" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 md:block hidden'>
               Contact Us
             </Link>
           </nav>
