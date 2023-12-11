@@ -19,17 +19,17 @@ function Header() {
                     </button>
                     <ul className={`sm:flex sm:flex-row flex-col sm:gap-10 gap-5 sm:static sm:bg-transparent ${menu ? "bg-white absolute top-24 left-0 right-0 p-4" : "hidden"} `}>
                         <li>
-                            <Link href="#" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                            <Link href="/about-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
                                 About
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                            <Link href="/contact-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
                                 Contact
                             </Link>
                         </li>
                     </ul>
-                    <Link href="#" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 sm:block hidden'>
+                    <Link href="/contact-us" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 sm:block hidden'>
                         Contact Us
                     </Link>
                 </nav>

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function ServiceBox({ Classes, title, subTitle, content, link, img_url }: any) {
+function ImageBox({ Classes, title, subTitle, content, link, img_url }: any) {
   return (
     <div className={`bg-white border-[3px] border-black flex gap-7 p-3 items-center justify-between ${Classes}`}>
       <div className='md:w-1/4 w-full'>
@@ -26,4 +26,4 @@ function ServiceBox({ Classes, title, subTitle, content, link, img_url }: any) {
   )
 }
 
-export default ServiceBox
+export default ImageBox

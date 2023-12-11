@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceBox from './service-box'
+import ImageBox from './image-box'
 
 function We_Believe() {
     return (
@@ -15,7 +15,7 @@ function We_Believe() {
             </div>
             <div className='container mx-auto border-t'></div>
             <div className='container mx-auto px-4 py-16 grid gap-16'>
-                <ServiceBox
+                <ImageBox
                     title=" WHY US"
                     subTitle="Who we are"
                     content="10+ years of B2B e-commerce & enterprise sales experience. Emphasis on low-cost, high-quality go-to-market strategies, and revenue generation."
@@ -24,7 +24,7 @@ function We_Believe() {
                     Classes="md:flex-row flex-col-reverse"
                 />
 
-                <ServiceBox
+                <ImageBox
                     title="OUR CUSTOMERS"
                     subTitle="What we do"
                     content="We focus on Pre-Seed, and Series-A organizations to help them with market research, marketing strategy, web design, pitch decks, brand awareness, and marketing tech stack audits, optimizations and discovery. We only focus on products and services that solve a customer's unmet need."
