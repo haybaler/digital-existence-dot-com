@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 
 function ImageBox({ Classes, title, subTitle, content, link, img_url }: any) {
+  console.log("🚀 ~ file: image-box.tsx:7 ~ ImageBox ~ img_url:", img_url)
   const fadeInUp: Variants = {
     offscreen: {
       transform: "translateY(15%)",
