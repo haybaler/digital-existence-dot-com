@@ -9,12 +9,19 @@ import { AboutPage } from '../../sanity/lib/query'
 
 export default function About_Us({aboutPageData}:any) {
     console.log("🚀 ~ file: about-us.tsx:11 ~ About_Us ~ aboutPageData:", aboutPageData)
+    const {about_sub_title, about_title, pagebanner, content, Features} = aboutPageData
     return (
         <main>
             <Banner
-                title="About Us" />
-            <Our_Strategy />
-            <Services />
+                title={pagebanner?.banner_title} 
+                bg={pagebanner?.banner_image.asset.url}
+            />
+            <Our_Strategy 
+                title={about_title} 
+                subTitle={about_sub_title}
+                data={content}
+            />
+            <Services feature={Features}/>
             <Grow_Business />
         </main>
     )

@@ -43,7 +43,16 @@ export const AboutPage = `*[ _type == "aboutpage"]{
                }
           }
      },
-    
+     Features[]{
+          icon{
+               asset->{
+                    url
+               }  
+          },
+          info,
+          title
+     },
+     content,
      _createdAt,
      _updatedAt
 }`;
