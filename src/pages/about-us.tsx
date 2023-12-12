@@ -8,7 +8,6 @@ import { client } from '../../sanity/lib/client'
 import { AboutPage } from '../../sanity/lib/query'
 
 export default function About_Us({aboutPageData}:any) {
-    console.log("🚀 ~ file: about-us.tsx:11 ~ About_Us ~ aboutPageData:", aboutPageData)
     const {about_sub_title, about_title, pagebanner, content, Features} = aboutPageData
     return (
         <main>

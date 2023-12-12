@@ -56,3 +56,21 @@ export const AboutPage = `*[ _type == "aboutpage"]{
      _createdAt,
      _updatedAt
 }`;
+
+export const Portfolio = `*[ _type == "portfolio" && slug.current == $slug][0]{
+     title,
+     image{
+          asset->{
+               url
+          } 
+     },
+     description,
+     when,
+     who,
+     content,
+     images[]{
+          asset->{
+               url
+          }
+     }
+}`
