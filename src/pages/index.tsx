@@ -11,7 +11,7 @@ export default function Home({homePageData}:any) {
   return (
     <main>
      
-      <SeoMeta title="Growth Marketing for Startups" description="Growth Marketing for Startups" url="https://digital-existen.vercel.app" />     
+      <SeoMeta title="Growth Marketing for Startups" description="Growth Marketing for Startups with Strategy - Launch - Market Research - Optimization - Corporate Website Design & Development" url="https://digital-existence.com" />     
       <Banner
         title={pagebanner?.banner_title}
         content={pagebanner?.banner_sub_title}

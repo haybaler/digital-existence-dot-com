@@ -8,7 +8,7 @@ import { client } from "../../sanity/lib/client";
 import { Portfolio } from "../../sanity/lib/query";
 import PortableText from "react-portable-text";
 
-export default function Landing({ portfolio }) {
+export default function Landing({ portfolio , slug }) {
   const fadeInUp = {
     offscreen: {
       transform: "translateY(15%)",
@@ -25,11 +25,12 @@ export default function Landing({ portfolio }) {
     },
   };
   return (
+ 
     <main>
       <SeoMeta
-        title="  Karius Test Landing Page"
-        description=" Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
-        url="https://digital-existen.vercel.app/landing"
+        title=   {portfolio?.title}
+        description=  {portfolio?.description}
+        url={`https://digital-existence.com/${slug}`}
       />
       <motion.section
         initial="offscreen"
@@ -122,6 +123,7 @@ export async function getServerSideProps(pageContext) {
   }
   return {
     props: {
+      slug,
       portfolio,
       preview: true,
     },
