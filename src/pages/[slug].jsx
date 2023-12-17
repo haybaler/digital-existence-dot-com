@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { client } from "../../sanity/lib/client";
-import { Portfolio } from "../../sanity/lib/query";
+import { Portfolio ,NavMenu} from "../../sanity/lib/query";
 import PortableText from "react-portable-text";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
