@@ -7,8 +7,10 @@ import React from "react";
 import { client } from "../../sanity/lib/client";
 import { Portfolio } from "../../sanity/lib/query";
 import PortableText from "react-portable-text";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
-export default function Landing({ portfolio , slug }) {
+export default function Landing({ portfolio , slug , navMenuData }) {
   const fadeInUp = {
     offscreen: {
       transform: "translateY(15%)",
@@ -27,6 +29,7 @@ export default function Landing({ portfolio , slug }) {
   return (
  
     <main>
+      <Header data={navMenuData} />
       <SeoMeta
         title=   {portfolio?.title}
         description=  {portfolio?.description}
@@ -109,6 +112,7 @@ export default function Landing({ portfolio , slug }) {
         </div>
       </section>
       <Grow_Business />
+      <Footer data={navMenuData} />
     </main>
   );
 }
@@ -116,6 +120,7 @@ export default function Landing({ portfolio , slug }) {
 export async function getServerSideProps(pageContext) {
   const slug = pageContext.query.slug;
   const portfolio = await client.fetch(Portfolio, { slug });
+  const navMenuData = await client.fetch(NavMenu);
   if (portfolio?.length < 1) {
     return {
       notFound: true,
@@ -125,6 +130,7 @@ export async function getServerSideProps(pageContext) {
     props: {
       slug,
       portfolio,
+      navMenuData : navMenuData[0],
       preview: true,
     },
   };

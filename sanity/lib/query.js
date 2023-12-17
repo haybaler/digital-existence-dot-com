@@ -74,3 +74,14 @@ export const Portfolio = `*[ _type == "portfolio" && slug.current == $slug][0]{
           }
      }
 }`
+
+
+
+export const NavMenu = `*[ _type == "navmenu"]{
+     title,
+     nav_items[]{          
+          title,
+          link
+     },
+    
+}`;

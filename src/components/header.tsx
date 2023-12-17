@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { FaBarsStaggered } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 
-function Header() {
+function Header({ data }: any) {
+
     const [menu, setMenu] = useState(false)
     return (
         <header className='py-7'>
@@ -18,16 +19,14 @@ function Header() {
                         {menu ? <AiOutlineClose /> : <FaBarsStaggered />}
                     </button>
                     <ul className={`sm:flex sm:flex-row flex-col sm:gap-10 gap-5 sm:static sm:bg-transparent ${menu ? "bg-white absolute top-24 left-0 right-0 p-4" : "hidden"} `}>
-                        <li>
-                            <Link href="/about-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/landing" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
-                            Karius
-                            </Link>
-                        </li>
+
+                        {data?.nav_items?.map((item: any, idx: number) => (
+                            <li key={idx}>
+                                <Link href={item.link} className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                                    {item.title}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                     <Link href="/contact-us" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 sm:block hidden'>
                         Contact Us
