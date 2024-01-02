@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@iconify/react": "^4.1.1",
-    "@portabletext/react": "^3.0.11",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.21.0",
     "framer-motion": "^10.16.16",
@@ -19,10 +17,10 @@
     "nodemailer": "^6.9.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.49.0",
     "react-icons": "^4.12.0",
+    "react-portable-text": "^0.6.0",
     "sanity": "^3.21.0",
-    "sanity-plugin-asset-source-openai": "^1.1.2",
-    "sanity-plugin-iconify": "^1.1.1",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {

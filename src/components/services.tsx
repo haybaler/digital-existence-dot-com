@@ -2,7 +2,7 @@ import { Variants, motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
-function Services() {
+function Services({feature}:any) {
     const fadeInUp: Variants = {
         offscreen: {
             transform: "translateY(15%)",
@@ -21,16 +21,16 @@ function Services() {
     return (
         <motion.section className='py-16'>
             <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-7'>
-                {Service_Date.map((item: any, idx: number) => {
+                {feature?.map((item: any, idx: number) => {
                     return <motion.div
                         variants={fadeInUp}
                         key={idx}>
-                        <Image src={item.img} alt='service/1' width={50} height={50} />
+                        <Image src={item?.icon?.asset?.url} alt='service/1' width={50} height={50} />
                         <h3 className='text-xl font-normal text-black my-5'>
                             {item.title}
                         </h3>
                         <p className='text-xl font-normal text-black/60'>
-                            {item.content}
+                            {item.info}
                         </p>
                     </motion.div>
                 })}
