@@ -4,9 +4,10 @@ import Head from 'next/head';
 const SeoMeta = ({ title, description , url }: any) => {
     return (
         <Head>
-            <title>{title}</title>          
+            <title>{title}</title>
+            <meta name="robots" content="noindex"></meta>
             <meta name="description" content={description} />
-            {/* <link rel="canonical" href={url} />
+            <link rel="canonical" href={url} />
             <meta property="og:locale" content="en_US" />
             <meta property="og:type" content="article" />
             <meta property="og:title" content={title} />
@@ -22,7 +23,7 @@ const SeoMeta = ({ title, description , url }: any) => {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@DigitalExistence" />
             <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={description} /> */}
+            <meta name="twitter:description" content={description} />
         </Head>
     );
 };

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useRef } from 'react'
 import { Variants, motion, useInView } from "framer-motion"
 
-function Banner({ title, content, link, bg }: any) {
+function Banner({ title, content, link }: any) {
    
     const fadeInUp: Variants = {
         offscreen: {
@@ -26,11 +26,7 @@ function Banner({ title, content, link, bg }: any) {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             className=''>
-            <div className='container mx-auto min-h-[480px] flex items-center !bg-center !bg-cover !bg-no-repeat py-[7.5rem] border border-black md:px-0 px-10'
-            style={{
-                background: `url(${bg ? bg : '/images/main-bg.jpg'})`,
-              }}
-            >
+            <div className='container mx-auto min-h-[480px] flex items-center bg-[url("/images/main-bg.jpg")] bg-center bg-cover bg-no-repeat py-[7.5rem] border border-black md:px-0 px-10'>
                 <div className='w-full'>
                     <motion.h1
                         variants={fadeInUp}
