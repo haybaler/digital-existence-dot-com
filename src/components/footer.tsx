@@ -1,15 +1,10 @@
-
-
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaBarsStaggered } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRouter } from 'next/router';
-import { client } from '../../sanity/lib/client';
-import { Homepage } from '../../sanity/lib/query';
 
-function Footer({ data }: any) {
-
+function Footer() {
   const [menu, setMenu] = useState(false)
   const router = useRouter()
   return (
@@ -31,13 +26,16 @@ function Footer({ data }: any) {
               {menu ? <AiOutlineClose /> : <FaBarsStaggered />}
             </button>
             <ul className={`sm:flex sm:flex-row flex-col sm:gap-10 gap-5 sm:static sm:bg-transparent ${menu ? "bg-white absolute top-24 left-0 right-0 p-4" : "hidden"} `}>
-              {data?.nav_items?.map((item: any, idx: number) => (
-                <li key={idx}>
-                  <Link href={item.link} className='text-xs font-medium uppercase text-black/60 hover:text-black'>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/about-us" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/landing" className='text-xs font-medium uppercase text-black/60 hover:text-black'>
+                  Karius
+                </Link>
+              </li>
             </ul>
             <Link href="/contact-us" className='text-xs font-medium uppercase text-white bg-black py-3 px-10 hover:opacity-80 md:block hidden'>
               Contact Us
@@ -50,5 +48,3 @@ function Footer({ data }: any) {
 }
 
 export default Footer
-
-
