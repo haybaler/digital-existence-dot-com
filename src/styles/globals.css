@@ -1,25 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+.content p {
+  font-size: 20px;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.content h3,
+.content h4 {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
+}
+.content li {
+  font-size: 20px;
+  opacity: 0.6;
+}
 
-.content p{
-    font-size: 20px;
-    opacity: 0.6;
-    margin-bottom: 1rem;
+.body-text p {
+  @apply mb-3 text-base;
 }
-.content h3, .content h4 {
-    font-weight: 700;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 1rem;
+.body-text h1 {
+  @apply mt-4 mb-3 text-3xl font-semibold;
 }
-.content li{
-    font-size: 20px;
-    opacity: 0.6;
+.body-text h2 {
+  @apply mt-4 mb-3 text-[28px] font-semibold;
+}
+.body-text h3 {
+  @apply mt-4 mb-3 text-[26px] font-semibold;
+}
+.body-text h4 {
+  @apply mt-4 mb-3 text-[24px] font-semibold;
 }
